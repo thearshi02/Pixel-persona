@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, Pin, Plus, RotateCcw, Heart, Coffee, BookOpen, Smile } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Sparkles, Plus, RotateCcw, Heart, Coffee } from 'lucide-react';
 import { sounds } from '../utils/soundEffects';
 
 interface ScrapbookSticker {
@@ -23,7 +23,6 @@ const INITIAL_STICKERS: ScrapbookSticker[] = [
 
 export const CanvaScrapbookBoard = () => {
   const [stickers, setStickers] = useState<ScrapbookSticker[]>(INITIAL_STICKERS);
-  const [selectedPreset, setSelectedPreset] = useState<string>('Dorm Desk');
 
   const addSticker = (text: string, color: string) => {
     sounds.playPaper();

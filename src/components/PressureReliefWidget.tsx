@@ -17,7 +17,7 @@ export const PressureReliefWidget = () => {
   useEffect(() => {
     if (!isBreathing) return;
 
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setTimeout>;
     const runCycle = () => {
       setBreathPhase('Inhale');
       sounds.playPaper();
